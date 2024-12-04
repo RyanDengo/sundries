@@ -4,8 +4,16 @@ import hashlib
 #执行sql语句
 def my_sql(sql):
     #连接数据库
-    conn=pymysql.connect(host='10.10.10.9',user='root',password='123456',db='mydb1',port=3306,
-           charset='utf8',autocommit=True)#autocommit 自动提交sql
+    conn=pymysql.connect(
+        host='10.10.10.9',
+        user='root',
+        password='123456',
+        db='mydb1',
+        port=3306,
+        charset='utf8',
+        autocommit=True
+    )#autocommit 自动提交sql
+
     cur=conn.cursor(pymysql.cursors.DictCursor)#建立游标,设置返回数据类型是字典
     cur.execute(sql)#执行sql
     res=cur.fetchone()#返回一条数据
