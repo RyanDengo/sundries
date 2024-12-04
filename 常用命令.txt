@@ -1,0 +1,10 @@
+存档版本
+
+git init 初始化，创建一个.git仓库
+git add 路径。 选择哪一些变动是需要提交的
+.gitignore 选择哪一些路径是不需要提交的（在vscode中创建一个.gitignore的文件，其中放入不要提交的文件名）
+git commit -m /git commit -v（推荐使用）。打开vs等你输入理由后提交到本地仓库，会回顾具体改了哪一些的内容。
+git log 查看提交的版本。
+git reflog 查看每一次改动。
+git reset —hard xxxxxx 切换版本，xxxxxx为log展示的序列号。
+
