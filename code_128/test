@@ -1,0 +1,22 @@
+# 自定义函数，用于处理每一行数据
+def process_line(line):
+    # 这里可以编写具体的处理逻辑
+    return line.upper()  # 示例：将行转换为大写
+ 
+# 读取文件并处理每一行
+with open('example.txt', 'r') as file:
+    processed_lines = [process_line(line) for line in file.readlines()]
+ 
+# 输出处理后的每一行
+for processed_line in processed_lines:
+    print(processed_line)
+
+'''
+
+
+python 读取txt每一行数据,参与自定义函数遍历
+要在Python中读取文本文件的每一行并将其传递给自定义函数进行处理，可以使用open()函数打开文件，然后使用readlines()方法读取所有行，并使用列表推导式应用自定义函数。以下是一个示例代码：
+
+
+确保example.txt是你的文本文件名，并且process_line函数包含了你需要对每一行执行的自定义逻辑。这段代码将遍历文件中的每一行，将其传递给process_line函数进行处理，并输出处理后的结果。
+'''
