@@ -1,0 +1,59 @@
+#创建数据库
+CREATE DATABASE users
+#删除数据库
+DROP DATABASE users
+
+
+#新增表
+/*
+id: 主键，自动递增
+name: 一个最大长度为100字符的字符串，不能为空
+age: 整数类型字段，可以为空
+email: 一个最大长度为100字符的字符串，可以为空
+created_at: 时间戳，默认为当前时间
+IF NOT EXISTS是可选的，用于避免在表已经存在的情况下重复创建。
+*/
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    email VARCHAR(100),
+    #created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE app_myuser(
+	username VARCHAR(100) NOT NULL,
+	passwd VARCHAR(100) NOT NULL
+
+)
+
+#插入数据
+INSERT INTO users 
+(name,age,email)
+VALUES ("ryan",25,"ryan@alongdf.cn")
+
+#新增列
+ALTER TABLE book2
+ADD COLUMN floor VARCHAR(255);
+
+#删除列
+ALTER TABLE users DROP created_at;
+
+#更新数据
+UPDATE book2
+SET pc_name = "lmc003"
+WHERE id = 4
+
+#删除数据
+DELETE FROM book2
+WHERE user_name = "feilong.deng"
+
+
+
+
+
+
+SELECT * FROM users
+WHERE id = 4
+
+SELECT * FROM book2
